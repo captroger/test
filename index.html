@@ -3,432 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChillCraft Press — Bar-Quality Ice. At Home.</title>
+  <title>TextTally | Blazing-Fast Word & Character Counter</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A blazing-fast, minimal word and character counter that provides instant, offline text statistics: words, characters, sentences, paragraphs, reading and speaking time. Zero friction, zero ads.">
+  <meta name="keywords" content="word counter, character counter, text statistics, reading time calculator, speaking time counter, paragraph counter, sentence counter, online word counter, clean writing tool">
+  <meta name="author" content="TextTally">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TextTally | Instant Word & Character Counter">
+  <meta property="og:description" content="Get instant text statistics with zero clutter. Track words, characters with/without spaces, sentences, paragraphs, reading and speaking time in real-time. Works offline.">
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630' fill='%230f172a'><rect width='1200' height='630' fill='%230f172a'/><text x='50%25' y='45%25' font-family='system-ui, sans-serif' font-weight='bold' font-size='80' fill='%233b82f6' text-anchor='middle'>TextTally</text><text x='50%25' y='60%25' font-family='system-ui, sans-serif' font-size='32' fill='%2394a3b8' text-anchor='middle'>The Minimalist Word &amp; Character Counter</text></svg>">
+  <meta property="og:url" content="https://texttally.com/">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TextTally | Instant Word & Character Counter">
+  <meta name="twitter:description" content="Get instant text statistics with zero clutter. Track words, characters with/without spaces, sentences, paragraphs, reading and speaking time in real-time. Works offline.">
+  
+  <!-- Inline Favicon (Tally mark style) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2.5' stroke-linecap='round'><path d='M5 4v16M10 4v16M15 4v16M20 4v16M2 12h20'/></svg>">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- JSON-LD Structured Data (WebApplication Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "TextTally",
+    "alternateName": "Text Tally",
+    "url": "https://texttally.com/",
+    "description": "A blazing-fast, minimal word and character counter that gives writers, students, and professionals instant text statistics with zero clutter.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires HTML5, CSS3, and JavaScript support.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Skip to Content link for keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ============================================================
-       NAVIGATION
-       ============================================================ -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="#" class="nav-logo">
-        <span class="nav-logo-icon"><i class="fas fa-snowflake"></i></span>
-        ChillCraft Press
+  <!-- Navigation Bar -->
+  <nav class="app-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M5 4v16M10 4v16M15 4v16M20 4v16M2 12h20"/>
+        </svg>
+        <span>TextTally</span>
       </a>
-
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
       </button>
-
-      <div class="nav-links">
-        <a href="#product" class="nav-link">The System</a>
-        <a href="#uses" class="nav-link">Uses</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#pricing" class="nav-link nav-cta">Get Yours</a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="more-tools.html" class="nav-link">More Tools</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </div>
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge fade-in">
-          <span class="hero-badge-dot"></span>
-          Now Available — Limited Stock
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-area">
+        <h1>TextTally</h1>
+        <p class="tagline">The clean, minimal, blazing-fast word and character counter.</p>
+      </div>
+      
+      <!-- Theme and Text Size Pickers -->
+      <div class="header-controls">
+        <div class="control-group">
+          <label for="theme-select" class="control-label">Theme</label>
+          <select id="theme-select" class="control-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="sepia">Sepia</option>
+            <option value="forest">Forest</option>
+            <option value="ocean">Ocean</option>
+          </select>
         </div>
-
-        <h1 class="hero-title fade-in fade-in-delay-1">
-          Bar-Quality Ice.<br>
-          <em>At Home.</em>
-        </h1>
-
-        <p class="hero-subtitle fade-in fade-in-delay-2">
-          Finally, a complete home ice system that delivers crystal-clear, 
-          slow-melting cubes for your morning coffee, evening cocktail, 
-          or fresh-pressed juice.
-        </p>
-
-        <div class="hero-actions fade-in fade-in-delay-3">
-          <a href="#pricing" class="btn btn-primary">
-            Shop Now <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#product" class="btn btn-secondary">
-            See How It Works
-          </a>
-        </div>
-
-        <div class="hero-stats fade-in fade-in-delay-4">
-          <div>
-            <div class="hero-stat-number">100%</div>
-            <div class="hero-stat-label">Crystal Clear Ice</div>
-          </div>
-          <div>
-            <div class="hero-stat-number">48</div>
-            <div class="hero-stat-label">Cubes Per Batch</div>
-          </div>
-          <div>
-            <div class="hero-stat-number">99%</div>
-            <div class="hero-stat-label">Satisfaction Rate</div>
-          </div>
+        
+        <div class="control-group">
+          <label for="font-size-select" class="control-label">Text Size</label>
+          <select id="font-size-select" class="control-select">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+          </select>
         </div>
       </div>
+    </header>
 
-      <div class="hero-image-wrapper fade-in fade-in-delay-2">
-        <img src="images/hero.png" alt="ChillCraft Press ice machine system" class="hero-image">
+    <main id="main-content" class="app-main">
+      <section class="input-section">
+        <div class="textarea-wrapper">
+          <label for="text-input" class="sr-only">Enter or paste your text for analysis</label>
+          <textarea 
+            id="text-input" 
+            placeholder="Start typing or paste your text here..." 
+            autofocus 
+            autocomplete="off" 
+            spellcheck="true"
+          ></textarea>
+        </div>
+        
+        <div class="action-bar">
+          <button id="grammar-btn" class="btn btn-secondary" aria-label="Check grammar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            Check Grammar
+          </button>
 
-        <div class="hero-image-badge">
-          <div class="hero-image-badge-icon">
-            <i class="fas fa-star"></i>
+          <button id="save-btn" class="btn btn-secondary" aria-label="Save text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            Save <span class="kbd-shortcut">(Ctrl+S)</span>
+          </button>
+
+          <button id="clear-btn" class="btn btn-secondary" aria-label="Clear all text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            Clear <span class="kbd-shortcut">(Esc)</span>
+          </button>
+          
+          <button id="copy-stats-btn" class="btn btn-primary" aria-label="Copy statistics to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy Stats
+          </button>
+        </div>
+      </section>
+
+      <section class="stats-section" aria-label="Text statistics">
+        <div class="stats-grid">
+          <!-- Words -->
+          <div class="stat-card" id="card-words">
+            <span class="stat-label">Words</span>
+            <span class="stat-value" id="val-words">0</span>
           </div>
-          <div class="hero-image-badge-text">
-            <strong>#1 Home Ice System</strong>
-            Editor's Choice 2026
+
+          <!-- Characters (with spaces) -->
+          <div class="stat-card" id="card-char-spaces">
+            <span class="stat-label">Characters <span class="sub-label">(with spaces)</span></span>
+            <span class="stat-value" id="val-char-spaces">0</span>
           </div>
+
+          <!-- Characters (no spaces) -->
+          <div class="stat-card" id="card-char-no-spaces">
+            <span class="stat-label">Characters <span class="sub-label">(no spaces)</span></span>
+            <span class="stat-value" id="val-char-no-spaces">0</span>
+          </div>
+
+          <!-- Sentences -->
+          <div class="stat-card" id="card-sentences">
+            <span class="stat-label">Sentences</span>
+            <span class="stat-value" id="val-sentences">0</span>
+          </div>
+
+          <!-- Paragraphs -->
+          <div class="stat-card" id="card-paragraphs">
+            <span class="stat-label">Paragraphs</span>
+            <span class="stat-value" id="val-paragraphs">0</span>
+          </div>
+
+          <!-- Reading Time -->
+          <div class="stat-card" id="card-reading-time">
+            <span class="stat-label">Est. Reading Time <span class="sub-label">(200 wpm)</span></span>
+            <span class="stat-value" id="val-reading-time">0 sec</span>
+          </div>
+
+          <!-- Speaking Time -->
+          <div class="stat-card" id="card-speaking-time">
+            <span class="stat-label">Est. Speaking Time <span class="sub-label">(130 wpm)</span></span>
+            <span class="stat-value" id="val-speaking-time">0 sec</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grammar Analysis Panel -->
+      <section id="grammar-panel" class="grammar-panel" style="display: none;">
+        <div class="panel-header">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-color); display: inline-block; vertical-align: middle;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            Grammar &amp; Style Analysis
+          </h2>
+          <button id="close-grammar" class="close-btn" aria-label="Close grammar panel">&times;</button>
+        </div>
+        <div id="grammar-results" class="panel-content">
+          <!-- Suggestions injected here dynamically -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-content">
+        <p class="privacy-note">🔒 <strong>Privacy First:</strong> Your text never leaves your device. All calculations are performed instantly in your browser.</p>
+        <p class="copyright">&copy; 2026 TextTally. Made for writers, students, and editors.</p>
+        
+        <!-- Subtle affiliate/support link section -->
+        <div class="affiliate-area">
+          <span>Need a robust grammar checker? Try <a href="https://grammarly.com" target="_blank" rel="noopener noreferrer">Grammarly</a> or <a href="https://hemingwayapp.com" target="_blank" rel="noopener noreferrer">Hemingway Editor</a> to refine your writing.</span>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
+  </div>
 
-  <!-- ============================================================
-       PROBLEM → SOLUTION
-       ============================================================ -->
-  <section class="section problem-solution" id="problem">
-    <div class="container">
-      <div class="text-center fade-in">
-        <span class="section-label">The Problem</span>
-        <h2 class="section-title">Bad Ice Ruins Good Drinks</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">
-          Cloudy, fast-melting ice waters down your carefully crafted coffee, 
-          cocktail, or juice. You deserve better.
-        </p>
-      </div>
-
-      <div class="problem-solution-grid">
-        <div class="problem-card fade-in">
-          <div class="problem-card-icon">
-            <i class="fas fa-face-frown"></i>
-          </div>
-          <h3>Old-School Ice Trays</h3>
-          <p>
-            Cloudy cubes, plastic taste, awkward release, and they take up 
-            half your freezer. Your drinks end up diluted and disappointing 
-            before you've finished them.
-          </p>
-        </div>
-
-        <div class="solution-card fade-in fade-in-delay-1">
-          <div class="solution-card-icon">
-            <i class="fas fa-check"></i>
-          </div>
-          <h3>Meet ChillCraft Press</h3>
-          <p>
-            Our press-type system uses directional freezing technology to 
-            create dense, crystal-clear ice that melts slowly and looks 
-            stunning in every glass.
-          </p>
-
-          <div class="solution-features">
-            <div class="solution-feature">
-              <i class="fas fa-circle-check"></i>
-              Crystal-clear, bar-quality ice in minutes
-            </div>
-            <div class="solution-feature">
-              <i class="fas fa-circle-check"></i>
-              No more plastic taste or awkward tray-twisting
-            </div>
-            <div class="solution-feature">
-              <i class="fas fa-circle-check"></i>
-              Compact footprint — fits any kitchen
-            </div>
-            <div class="solution-feature">
-              <i class="fas fa-circle-check"></i>
-              Beautiful green design you'll want on your counter
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       PRODUCT SHOWCASE
-       ============================================================ -->
-  <section class="section product-showcase" id="product">
-    <div class="container">
-      <div class="fade-in">
-        <span class="section-label">The System</span>
-        <h2 class="section-title">Three Parts. Infinite Ice.</h2>
-        <p class="section-subtitle">
-          A complete ice-making ecosystem designed to work beautifully together.
-        </p>
-      </div>
-
-      <div class="product-grid">
-        <!-- Card 1: Press Machine -->
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <i class="fas fa-compress-arrows-alt"></i>
-          </div>
-          <h3 class="product-card-name">Press Machine</h3>
-          <p class="product-card-desc">
-            The heart of the system. Precision-engineered press mechanism 
-            creates clear ice in under 10 minutes. One-touch operation in our signature green.
-          </p>
-          <div class="product-card-spec">
-            <span><i class="fas fa-clock"></i> 10 min</span>
-            <span><i class="fas fa-weight-scale"></i> 3.2 lbs</span>
-            <span><i class="fas fa-ruler"></i> 8" × 6" × 10"</span>
-          </div>
-        </div>
-
-        <!-- Card 2: 48-Grate Tray -->
-        <div class="product-card fade-in fade-in-delay-1">
-          <div class="product-card-image">
-            <i class="fas fa-border-all"></i>
-          </div>
-          <h3 class="product-card-name">48-Grate Tray</h3>
-          <p class="product-card-desc">
-            Reusable, BPA-free silicone tray with 48 perfectly-sized 
-            compartments. Flexible release — every cube pops out cleanly.
-          </p>
-          <div class="product-card-spec">
-            <span><i class="fas fa-cube"></i> 48 cubes</span>
-            <span><i class="fas fa-recycle"></i> Reusable</span>
-            <span><i class="fas fa-droplet"></i> 1.2L capacity</span>
-          </div>
-        </div>
-
-        <!-- Card 3: Storage Box -->
-        <div class="product-card fade-in fade-in-delay-2">
-          <div class="product-card-image">
-            <i class="fas fa-box-open"></i>
-          </div>
-          <h3 class="product-card-name">Storage Box</h3>
-          <p class="product-card-desc">
-            Airtight, stackable storage for up to 96 cubes. Keeps your ice 
-            fresh and odor-free in the freezer. Clear lid — see your supply at a glance.
-          </p>
-          <div class="product-card-spec">
-            <span><i class="fas fa-cubes"></i> 96 cubes</span>
-            <span><i class="fas fa-wind"></i> Airtight</span>
-            <span><i class="fas fa-stack-overflow"></i> Stackable</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-showcase-cta fade-in fade-in-delay-3">
-        <a href="#pricing" class="btn btn-primary">
-          Get the Complete System <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       USE CASES
-       ============================================================ -->
-  <section class="section use-cases" id="uses">
-    <div class="container">
-      <div class="text-center fade-in">
-        <span class="section-label">Perfect For</span>
-        <h2 class="section-title">Elevate Every Drink</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">
-          From your first pour to your last sip — ice that performs as well as your craft.
-        </p>
-      </div>
-
-      <div class="use-cases-grid">
-        <!-- Coffee -->
-        <div class="use-case-card fade-in">
-          <div class="use-case-image" style="overflow: hidden;">
-            <img src="images/coffee.png" alt="Iced coffee with clear ChillCraft ice cubes" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="use-case-body">
-            <span class="use-case-tag">Coffee</span>
-            <h3>Better Extraction, Better Taste</h3>
-            <p>
-              Clear ice means pure coffee flavor — no off-notes from 
-              freezer odors or rapid dilution. Perfect for iced pour-overs, 
-              cold brew, and nitro coffee at home.
-            </p>
-          </div>
-        </div>
-
-        <!-- Cocktails -->
-        <div class="use-case-card fade-in fade-in-delay-1">
-          <div class="use-case-image" style="overflow: hidden;">
-            <img src="images/cocktail.png" alt="Crystal clear ice in a cocktail glass" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="use-case-body">
-            <span class="use-case-tag">Cocktails</span>
-            <h3>Crystal Clear, Slow Melt</h3>
-            <p>
-              Dense, slow-melting cubes keep your Old Fashioned or 
-              Negroni perfectly chilled without watering it down. 
-              Bar-quality ice that impresses every guest.
-            </p>
-          </div>
-        </div>
-
-        <!-- Juice -->
-        <div class="use-case-card fade-in fade-in-delay-2">
-          <div class="use-case-image" style="overflow: hidden;">
-            <img src="images/juice.png" alt="Fresh juice with clear ice cubes" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="use-case-body">
-            <span class="use-case-tag">Juice</span>
-            <h3>Fresh, Cold, Beautiful</h3>
-            <p>
-              Restaurant-style clear ice for your fresh-pressed juices. 
-              Keep your green juice cold without diluting the flavor. 
-              Stunning presentation in every glass.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       PRICING / BUNDLE
-       ============================================================ -->
-  <section class="section pricing" id="pricing">
-    <div class="container">
-      <div class="fade-in">
-        <span class="section-label">Bundle & Save</span>
-        <h2 class="section-title">Everything You Need</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">
-          Get the complete ChillCraft Press system — machine, tray, and storage box — all in one bundle.
-        </p>
-      </div>
-
-      <div class="pricing-card fade-in fade-in-delay-1">
-        <div class="pricing-badge">
-          <i class="fas fa-tag"></i>
-          🔥 Limited Time — 60% Off
-        </div>
-
-        <h3 class="pricing-bundle-name">ChillCraft Press System</h3>
-        <p class="pricing-bundle-desc">
-          Press Machine + 48-Grate Tray + Storage Box
-        </p>
-
-        <div class="pricing-price">
-          <span class="pricing-original"><sup>$</sup>49<sup>99</sup></span>
-          <span class="pricing-amount">
-            <sup>$</sup>19<sup>99</sup>
-          </span>
-          <span class="pricing-period">one-time payment — today only</span>
-        </div>
-
-        <div class="pricing-includes">
-          <div class="pricing-includes-title"><i class="fas fa-gift"></i> What's Included</div>
-          <div class="pricing-includes-item">
-            <i class="fas fa-circle-check"></i>
-            ChillCraft Press Machine — Signature Green
-          </div>
-          <div class="pricing-includes-item">
-            <i class="fas fa-circle-check"></i>
-            Reusable 48-Grate Silicone Tray
-          </div>
-          <div class="pricing-includes-item">
-            <i class="fas fa-circle-check"></i>
-            Airtight Storage Box (holds 96 cubes)
-          </div>
-          <div class="pricing-includes-item">
-            <i class="fas fa-circle-check"></i>
-            Quick-Start Guide & Recipe Book
-          </div>
-          <div class="pricing-includes-item">
-            <i class="fas fa-circle-check"></i>
-            Free Shipping — 2-5 Business Days
-          </div>
-        </div>
-
-        <!-- PayPal Buy Now Button -->
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=robstrijk%40gmail.com&item_name=ChillCraft+Press+Ice+System&amount=19.99&currency_code=USD&return=https://503e3978c0c4fa.lhr.life&cancel_return=https://503e3978c0c4fa.lhr.life" 
-           target="_blank"
-           class="btn btn-primary pricing-cta">
-          <i class="fab fa-paypal"></i> Buy Now — $19.99
-        </a>
-
-        <div class="pricing-guarantee">
-          <i class="fas fa-shield-halved"></i>
-          30-Day Satisfaction Guarantee
-          <span style="margin: 0 8px; opacity: 0.3;">|</span>
-          <i class="fas fa-truck"></i>
-          Free Shipping
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <i class="fas fa-snowflake" style="font-size: 1.2rem; margin-right: 8px;"></i>
-            ChillCraft Press
-          </div>
-          <p class="footer-tagline">
-            Bar-quality ice for the home enthusiast. 
-            Clear cubes, better drinks, every time.
-          </p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Product</h4>
-          <div class="footer-links">
-            <a href="#product">The System</a>
-            <a href="#uses">Use Cases</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#">Accessories</a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Support</h4>
-          <div class="footer-links">
-            <a href="#">Shipping & Returns</a>
-            <a href="#">Warranty</a>
-            <a href="#">FAQ</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        &copy; 2026 ChillCraft Press. All rights reserved. Made for the love of great drinks.
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
+  <!-- Link to vanilla JS script -->
+  <script src="script.js"></script>
 </body>
 </html>
