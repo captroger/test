@@ -865,3 +865,24 @@ textarea:focus {
     justify-content: center;
   }
 }
+
+/* Google AdSense Ad Placements */
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.ad-container ins.adsbygoogle {
+  margin: 0 auto;
+  max-width: 100%;
+}
