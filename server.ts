@@ -3,7 +3,7 @@ import { serve } from "bun";
 const BASE_DIR = "/home/team/shared/texttally";
 
 const server = serve({
-  port: 3001,
+  port: 3000,
   hostname: "0.0.0.0",
   async fetch(req) {
     const url = new URL(req.url);
