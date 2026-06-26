@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://texttally.com/sitemap.xml
+Sitemap: https://texttally.nl/sitemap.xml
