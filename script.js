@@ -515,3 +515,40 @@ Calculated instantly and privately on TextTally.`;
     });
   }
 });
+
+// Social Sharing
+const shareTwitter = document.getElementById('share-twitter');
+const shareLinkedin = document.getElementById('share-linkedin');
+const copyLink = document.getElementById('copy-link');
+
+if (shareTwitter) {
+  shareTwitter.addEventListener('click', (e) => {
+    e.preventDefault();
+    const text = encodeURIComponent("Check out TextTally - A minimal and privacy-first word counter for writers! ✍️");
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+  });
+}
+
+if (shareLinkedin) {
+  shareLinkedin.addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+  });
+}
+
+if (copyLink) {
+  copyLink.addEventListener('click', () => {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      const originalHTML = copyLink.innerHTML;
+      copyLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+      copyLink.classList.add('btn-success');
+      setTimeout(() => {
+        copyLink.innerHTML = originalHTML;
+        copyLink.classList.remove('btn-success');
+      }, 2000);
+    });
+  });
+}
