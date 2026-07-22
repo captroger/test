@@ -1,37 +1,77 @@
-# TextTally Word Counter
+# TextTally — Free Online Word & Character Counter
 
-A blazing-fast, minimal, offline-first word and character counter designed for writers, students, social media managers, and editors. TextTally provides instant text statistics with zero clutter, zero frameworks, and zero external dependencies at runtime.
+[![Website](https://img.shields.io/badge/website-texttally.nl-blue)](https://texttally.nl/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/captroger/test/pulls)
 
-![TextTally Preview](screenshot.png)
+A blazing-fast, minimal word and character counter that gives writers, students, and professionals instant text statistics with zero clutter.
 
-## Features
+## ✨ Features
 
-- **Real-Time Statistics**: Instantly calculates words, characters (with and without spaces), sentences, paragraphs, reading time, and speaking time as you type.
-- **Privacy-First Promise**: All calculations, text processing, and grammar checks are performed locally in your browser. Your text never leaves your device.
-- **Multiple Color Themes**: Choose from Light, Dark, Sepia (warm paper tones), Forest, or Ocean themes to protect your eyes during long writing sessions.
-- **Interactive Grammar & Spell Checker**: Checks for spelling, duplicate spaces, capitalization, and grammar using rule-based local analysis and LanguageTool's secure API. Double click or click "Fix" to automatically correct suggestions.
-- **Font Size Customization**: Adjustable textarea font size options (Small, Medium, Large) to suit your preference.
-- **Manual Save & txt Export**: Save your drafts to Secure LocalStorage and instantly download them as `.txt` files. Support for `Ctrl+S` keyboard shortcuts.
-- **Responsive Navigation**: Access secondary pages (Home, About Us, More Tools, Contact Us) across all screen configurations.
+- **Instant Word Count** — Real-time word counting as you type
+- **Character Counter** — With and without spaces
+- **Sentence & Paragraph Count** — Understand your text structure
+- **Reading Time** — Estimated reading time at 200 WPM
+- **Speaking Time** — Estimated speaking time at 130 WPM
+- **Grammar Checker** — Built-in client-side grammar analysis
+- **Five Themes** — Light, Dark, Sepia, Forest, Ocean
+- **Works Offline** — No internet needed after first load
+- **Privacy First** — All processing happens in your browser; nothing is uploaded
+- **No Sign-Up** — Start using immediately
+- **Copy & Save** — Save to LocalStorage or copy stats to clipboard
+- **Embeddable** — Mini word counter widget for other websites
+- **Responsive** — Works on mobile, tablet, and desktop
 
-## Architecture
+## 🚀 Quick Start
 
-TextTally is built to be as minimal and lightweight as possible:
-- **Zero Frameworks**: Written in standard, robust Vanilla ES6+ JavaScript.
-- **Single CSS Codebase**: A single `style.css` styles the entire multi-page application.
-- **Zero-Dependency**: No external fonts, analytics trackers, or render-blocking scripts are loaded.
+Visit **[texttally.nl](https://texttally.nl/)** and start typing!
 
-## How to Run Locally
+## 📦 Embed on Your Site
 
-You can run TextTally locally by double-clicking `index.html` in your browser, or serving it through any lightweight static file server:
+Add our mini word counter to your website:
 
-### Using Bun (Recommended)
-We have provided a native `server.ts` powered by Bun for serving the site:
-```bash
-bun run server.ts
+```html
+<iframe src="https://texttally.nl/embed.html" width="100%" height="200"
+  style="max-width:600px;border:2px solid #e2e8f0;border-radius:8px"
+  title="TextTally Word Counter"></iframe>
 ```
 
-This will run a lightning-fast web server serving TextTally on port `3000`.
+See [Link to Us](https://texttally.nl/link-to-us.html) for badges and banners.
 
----
-*Developed with care by TextTally Team.*
+## 🛠️ Tech Stack
+
+- Pure HTML5, CSS3, and vanilla JavaScript
+- No frameworks, no build steps
+- Client-side processing for privacy
+- Semantic HTML and JSON-LD structured data
+- SEO-optimized with sitemap, canonical URLs, and meta tags
+
+## 📄 Pages
+
+| Page | Description |
+|------|-------------|
+| [Home](https://texttally.nl/) | Word counter tool |
+| [Character Counter](https://texttally.nl/character-counter.html) | Dedicated character counter |
+| [Reading Time Calculator](https://texttally.nl/reading-time.html) | Reading time estimator |
+| [How It Works](https://texttally.nl/how-it-works.html) | Technical explanation |
+| [FAQ](https://texttally.nl/faq.html) | Frequently asked questions |
+| [Blog](https://texttally.nl/blog/) | Writing tips and guides |
+| [Link to Us](https://texttally.nl/link-to-us.html) | Badges and embed codes |
+| [Press Kit](https://texttally.nl/press.html) | Brand assets for journalists |
+
+## 📊 Stats
+
+- **Words:** Split by whitespace
+- **Characters:** Raw string length (with and without spaces)
+- **Sentences:** Split on `.`, `!`, `?`
+- **Paragraphs:** Split on double newlines
+- **Reading Time:** Words ÷ 200 WPM
+- **Speaking Time:** Words ÷ 130 WPM
+
+## 🔒 Privacy
+
+TextTally processes all text entirely in your browser. Your text is never sent to any server, logged, or stored. We use Google Analytics (anonymized) and display ads via Google AdSense, but your writing remains private.
+
+## 📝 License
+
+MIT © 2026 TextTally
