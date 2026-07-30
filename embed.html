@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TextTally — Mini Word Counter</title>
+<style>
+:root{--bg:#f8fafc;--card-bg:#fff;--text:#0f172a;--text-secondary:#475569;--primary:#3b82f6;--border:#e2e8f0;--focus-ring:0 0 0 3px #3b82f64d}
+@media(prefers-color-scheme:dark){:root{--bg:#0f172a;--card-bg:#1e293b;--text:#f8fafc;--text-secondary:#94a3b8;--border:#334155}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;padding:1rem;font-size:14px;line-height:1.4}
+textarea{width:100%;min-height:80px;border:1.5px solid var(--border);border-radius:8px;padding:.75rem;font-family:inherit;font-size:14px;resize:vertical;outline:none;background:var(--card-bg);color:var(--text);transition:border-color .2s}
+textarea:focus{border-color:var(--primary);box-shadow:var(--focus-ring)}
+.stats{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.stat{background:var(--card-bg);border:1px solid var(--border);border-radius:6px;padding:.35rem .75rem;font-size:12px}
+.stat strong{color:var(--primary);font-size:16px;display:block}
+.brand{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;font-size:13px;color:var(--text-secondary)}
+.brand svg{width:18px;height:18px;color:var(--primary)}
+.brand a{color:var(--primary);text-decoration:none;font-weight:600}
+.brand a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="brand">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 4v16M10 4v16M15 4v16M20 4v16M2 12h20"/></svg>
+<span>Powered by <a href="https://texttally.nl/" target="_blank">TextTally</a></span>
+</div>
+<textarea id="text" placeholder="Type or paste your text here..."></textarea>
+<div class="stats">
+<div class="stat"><strong id="words">0</strong>words</div>
+<div class="stat"><strong id="chars">0</strong>chars</div>
+<div class="stat"><strong id="sentences">0</strong>sentences</div>
+<div class="stat"><strong id="readtime">0s</strong>read</div>
+</div>
+<script>
+var t=document.getElementById('text'),w=document.getElementById('words'),c=document.getElementById('chars'),s=document.getElementById('sentences'),r=document.getElementById('readtime');
+t.addEventListener('input',function(){var v=t.value.trim();w.textContent=v?v.split(/\s+/).length:0;c.textContent=t.value.length;s.textContent=v?v.split(/[.!?]+/).filter(function(x){return x.trim()}).length:0;var wc=v?v.split(/\s+/).length:0;var sec=Math.ceil(wc/200*60);r.textContent=sec<60?sec+'s':Math.floor(sec/60)+'m '+(sec%60)+'s'});
+</script>
+</body>
+</html>
