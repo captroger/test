@@ -171,6 +171,16 @@
 
     <main id="main-content" class="app-main">
       <div class="content-wrapper">
+
+        <!-- Author Byline -->
+        <div class="author-byline">
+          <div class="author-avatar">TT</div>
+          <div>
+            <strong>TextTally Editorial Team</strong><br>
+            <span>Updated <time datetime="2026-07-17">July 17, 2026</time> &middot; 9 min read</span>
+          </div>
+        </div>
+
         <section class="static-section">
           <h2>What Is a Reading Time Calculator?</h2>
           <p>A reading time calculator estimates how long it takes to read a piece of text based on its word count and an average reading speed. It's an essential tool for writers, bloggers, educators, and public speakers who need to know how long their content will take to consume.</p>
@@ -229,6 +239,122 @@
 
           <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 1rem;">What is the difference between reading time and speaking time?</h3>
           <p>Reading time uses a faster pace (200 WPM) since silent reading is quicker. Speaking time uses a slower pace (130 WPM) because spoken delivery includes pauses and emphasis. TextTally calculates both.</p>
+        </section>
+
+        <!-- NEW: How Reading Time Is Calculated — Deep Dive -->
+        <section class="static-section">
+          <h2>How Reading Time Is Calculated — The Formulas Behind the Numbers</h2>
+          <p>TextTally's reading time estimates are based on two simple but well-researched formulas. Understanding how they work helps you trust the numbers and use them effectively.</p>
+
+          <h3 style="font-size:1.15rem;font-weight:700;margin-top:1rem;">Silent Reading Time Formula</h3>
+          <div class="formula-box">Reading Time (minutes) = Total Word Count ÷ 200 WPM</div>
+          <p>The <strong>200 words per minute</strong> benchmark is the most widely accepted average reading speed for English-speaking adults reading non-technical content. It originated from research by educational psychologists and has been adopted by platforms like Medium, Substack, and most content management systems.</p>
+
+          <h3 style="font-size:1.15rem;font-weight:700;margin-top:1rem;">Speaking Time Formula</h3>
+          <div class="formula-box">Speaking Time (minutes) = Total Word Count ÷ 130 WPM</div>
+          <p>The <strong>130 words per minute</strong> speaking rate reflects a comfortable, clear conversational pace suitable for presentations, podcasts, and audiobooks. It accounts for natural pauses, breaths, and emphasis that slow down spoken delivery relative to silent reading.</p>
+
+          <h3 style="font-size:1.15rem;font-weight:700;margin-top:1rem;">Example Calculations</h3>
+          <div class="ref-table-wrapper">
+            <table class="ref-table">
+              <thead><tr><th>Text Length</th><th>Reading Time (200 WPM)</th><th>Speaking Time (130 WPM)</th></tr></thead>
+              <tbody>
+                <tr><td>100 words</td><td class="limit-highlight">~30 seconds</td><td>~46 seconds</td></tr>
+                <tr><td>250 words</td><td class="limit-highlight">~1 min 15 sec</td><td>~1 min 55 sec</td></tr>
+                <tr><td>500 words</td><td class="limit-highlight">~2 min 30 sec</td><td>~3 min 51 sec</td></tr>
+                <tr><td>1,000 words</td><td class="limit-highlight">~5 minutes</td><td>~7 min 42 sec</td></tr>
+                <tr><td>2,500 words</td><td class="limit-highlight">~12 min 30 sec</td><td>~19 min 14 sec</td></tr>
+                <tr><td>5,000 words</td><td class="limit-highlight">~25 minutes</td><td>~38 min 28 sec</td></tr>
+                <tr><td>10,000 words</td><td class="limit-highlight">~50 minutes</td><td>~1 hr 17 min</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Want to calculate reading time for your own text? Paste it into <a href="index.html" class="cross-link">TextTally's word counter →</a> and both reading and speaking times update in real time.</p>
+        </section>
+
+        <!-- NEW: Factors Affecting Reading Speed -->
+        <section class="static-section">
+          <h2>Factors That Affect Reading Speed</h2>
+          <p>The 200 WPM benchmark is an average — actual reading speed varies significantly based on several factors. Understanding these helps you interpret your reading time estimates more accurately.</p>
+
+          <div class="usecase-grid">
+            <div class="usecase-card">
+              <div class="usecase-icon">📖</div>
+              <h3>Text Complexity</h3>
+              <p>Dense academic text with jargon and long sentences slows reading to 100–150 WPM. Simple, conversational prose can be read at 250–300 WPM. The more complex your vocabulary and sentence structure, the longer your reading time estimate should be adjusted upward.</p>
+            </div>
+
+            <div class="usecase-card">
+              <div class="usecase-icon">🎯</div>
+              <h3>Reading Purpose</h3>
+              <p>Skimming for key points: 400–700 WPM. Reading for comprehension: 200–300 WPM. Studying for retention: 100–150 WPM. Your reading time estimate assumes general comprehension-level reading — if your audience will be studying or skimming, adjust expectations accordingly.</p>
+            </div>
+
+            <div class="usecase-card">
+              <div class="usecase-icon">🧠</div>
+              <h3>Reader Familiarity</h3>
+              <p>Readers familiar with a topic read faster because they already understand key concepts and terminology. A medical journal article takes a doctor 2–3 minutes but might take a layperson 8–10 minutes to read the same number of words.</p>
+            </div>
+
+            <div class="usecase-card">
+              <div class="usecase-icon">💡</div>
+              <h3>Formatting & Layout</h3>
+              <p>Well-formatted text with headings, short paragraphs, bullet points, and white space reads faster than a wall of text. Visual elements like images, charts, and callout boxes also affect reading pace — readers pause on visuals.</p>
+            </div>
+
+            <div class="usecase-card">
+              <div class="usecase-icon">🌍</div>
+              <h3>Language & Translation</h3>
+              <p>Reading speed varies by language. English readers average 200–250 WPM. Readers of character-based languages like Chinese and Japanese may process content at different rates. Translated content may read differently than original-language text.</p>
+            </div>
+
+            <div class="usecase-card">
+              <div class="usecase-icon">📱</div>
+              <h3>Reading Environment</h3>
+              <p>Reading on a mobile phone in a noisy environment is slower than reading on a large screen in a quiet room. Distractions, fatigue, and screen brightness all affect real-world reading speed. Estimates are best-case; actual times vary.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- NEW: Reading Level Indicators & Flesch-Kincaid -->
+        <section class="static-section">
+          <h2>Reading Level Indicators: The Flesch-Kincaid Connection</h2>
+          <p>Reading time tells you how <em>long</em> your text takes to read, but it does not tell you how <em>difficult</em> it is to read. That is where readability formulas like the <strong>Flesch-Kincaid Grade Level</strong> come in. These formulas estimate the U.S. school grade level required to understand a text, based on average sentence length and average syllables per word.</p>
+
+          <p>For example, a text with a Flesch-Kincaid score of 8.0 means an average eighth-grader should be able to understand it. A score of 12.0 means a high school senior level. A score of 16.0+ indicates graduate-level difficulty.</p>
+
+          <div class="callout-box">
+            <strong>📊 How Reading Time and Readability Work Together:</strong> A 1,000-word text at grade level 8 takes about 5 minutes to read for a typical adult. But that same 1,000 words at grade level 16 might take 7–8 minutes because readers must process denser vocabulary and more complex sentence structures. Reading time × text complexity = true reading effort.
+          </div>
+
+          <p>For a full readability analysis of your text — including Flesch-Kincaid grade level, Flesch Reading Ease score, syllable counts, and lexical diversity — use our dedicated <a href="writing-statistics.html" class="cross-link">Writing Statistics tool →</a>. It provides all the advanced metrics you need to understand your text's complexity, not just its length.</p>
+
+          <div class="ref-table-wrapper">
+            <table class="ref-table">
+              <thead><tr><th>Flesch-Kincaid Grade</th><th>Reading Level</th><th>Example Content</th><th>Reading Speed Impact</th></tr></thead>
+              <tbody>
+                <tr><td class="limit-highlight" style="color:#15803d;">1–5</td><td>Elementary</td><td>Children's books, simple instructions</td><td>250–300 WPM (faster than average)</td></tr>
+                <tr><td class="limit-highlight" style="color:#15803d;">6–8</td><td>Middle School</td><td>Young adult fiction, blog posts, news</td><td>200–250 WPM (average)</td></tr>
+                <tr><td class="limit-highlight">9–12</td><td>High School</td><td>Quality journalism, business writing</td><td>180–220 WPM (slightly below average)</td></tr>
+                <tr><td class="limit-highlight">13–16</td><td>College</td><td>Academic papers, textbooks</td><td>120–180 WPM (below average)</td></tr>
+                <tr><td class="limit-highlight" style="color:#b91c1c;">17+</td><td>Graduate</td><td>Legal documents, scientific journals</td><td>80–150 WPM (significantly slower)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="source-cite">Source: Flesch, R. (1948). "A New Readability Yardstick." Journal of Applied Psychology. See also: <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" target="_blank" rel="noopener noreferrer">Flesch-Kincaid (Wikipedia)</a>.</p>
+        </section>
+
+        <!-- Cross-links -->
+        <section class="static-section">
+          <h2>Explore More Text Analysis Tools</h2>
+          <ul>
+            <li><a href="index.html" class="cross-link">Word & Character Counter →</a> — Full text statistics including words, characters, sentences, paragraphs, reading time, and speaking time.</li>
+            <li><a href="character-counter.html" class="cross-link">Character Counter →</a> — Platform-specific character limit reference for social media and SEO.</li>
+            <li><a href="case-converter.html" class="cross-link">Case Converter →</a> — Convert text between uppercase, lowercase, title case, camelCase, and more.</li>
+            <li><a href="keyword-density.html" class="cross-link">Keyword Density Checker →</a> — Analyze keyword frequency for SEO content optimization.</li>
+            <li><a href="writing-statistics.html" class="cross-link">Writing Statistics →</a> — Advanced readability scores including Flesch-Kincaid, syllable counts, and lexical diversity.</li>
+          </ul>
         </section>
       </div>
 
